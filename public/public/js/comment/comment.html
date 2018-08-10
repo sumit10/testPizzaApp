@@ -1,0 +1,25 @@
+<div class="panel panel-default panel-v-full">
+  <div class="panel-body">
+    <h3>Search Comment</h3>
+    <div class="row">
+      <div class="col-md-6 ">
+        <input type="text" class="form-control" ng-model="vm.search" ng-keyup="$event.keyCode == 13 && vm.getComments()" placeholder="Search">
+      </div>
+      <div class="col-md-3 ">
+        <button class="btn btn-deafult" ng-click="vm.getComments()" name="button">Search</button>
+      </div>
+    </div>
+    <div class="row" ng-hide="vm.users.length === 0">
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="comment in vm.comments">
+          <span class="label label-danger comment-label pull-right" ng-click="vm.removeComments($index)"><span class="glyphicon glyphicon-trash"></span></span>
+          {{comment.commentText}}
+        </li>
+      </ul>
+    </div>
+    <div class="row text-center" ng-show="vm.users.length === 0">
+        No Comments Found
+    </div>
+
+  </div>
+</div>

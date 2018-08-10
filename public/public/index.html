@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" ng-app="voxwebAdmin">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Voxweb Dashboard</title>
+  <!-- STYLES -->
+
+  <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css" media="screen">
+  <!-- bower:css -->
+  <link rel="stylesheet" href="components/rdash-ui/dist/css/rdash.css" />
+  <link rel="stylesheet" href="components/rdash-ui/dist/css/rdash.min.css" />
+  <link rel="stylesheet" href="components/nprogress/nprogress.css" />
+  <link rel="stylesheet" href="components/angular-notify/dist/angular-notify.css" />
+  <!-- endbower -->
+
+  <link rel="stylesheet" href="/css/style.css" media="screen">
+</head>
+<body>
+  <div  id="page-wrapper" ng-class="{'open':vm.menuOpen}" ng-cloak>
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper" >
+      <ul class="sidebar">
+        <li class="sidebar-main">
+          <a>
+           Pizza
+            <span class="menu-icon glyphicon glyphicon-transfer" ng-click="vm.menuOpen = !vm.menuOpen"></span>
+          </a>
+        </li>
+        <li class="sidebar-title">
+          <span>NAVIGATION</span>
+        </li>
+        <li class="sidebar-list">
+          <a ui-sref="pizza" ui-sref-active="active">Pizza <span class="menu-icon glyphicon glyphicon-list"></span></a>
+        </li>
+
+        <!-- <li class="sidebar-list">
+          <a href="#/tables">Tables <span class="menu-icon fa fa-table"></span></a>
+        </li> -->
+      </ul>
+    </div>
+    <!-- End Sidebar -->
+
+    <div id="content-wrapper">
+      <div class="page-content">
+
+        <!-- Header Bar -->
+        <!-- <div class="row header">
+          <div class="col-xs-12">
+            .
+          </div>
+        </div> -->
+        <!-- End Header Bar -->
+
+        <!-- Main Content -->
+        <div ui-view></div>
+
+      </div><!-- End Page Content -->
+    </div><!-- End Content Wrapper -->
+  </div><!-- End Page Wrapper -->
+  <!-- bower:js -->
+  <script src="components/jquery/dist/jquery.js"></script>
+  <script src="components/angular/angular.js"></script>
+  <script src="components/angular-cookies/angular-cookies.js"></script>
+  <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="components/nprogress/nprogress.js"></script>
+  <script src="components/angular-notify/dist/angular-notify.js"></script>
+  <script src="components/angular-mocks/angular-mocks.js"></script>
+  <script src="components/sinon/index.js"></script>
+  <script src="components/bardjs/dist/bard.js"></script>
+  <script src="components/bardjs/dist/bard-ngRouteTester.js"></script>
+  <!-- endbower -->
+
+    <!-- inject:js -->
+    <script src="/js/app.module.js"></script>
+    <!-- <script src="/js/comment/comment.module.js"></script> -->
+    <script src="/js/core/core.module.js"></script>
+    <script src="/js/data/data.module.js"></script>
+    <script src="/js/pizza/pizza.module.js"></script>
+    <!-- <script src="/js/poc/poc.module.js"></script>
+    <script src="/js/post/post.module.js"></script>
+    <script src="/js/user/user.module.js"></script> -->
+    <script src="/js/blocks/logger/logger.module.js"></script>
+    <script src="/js/blocks/router/router.module.js"></script>
+    <!-- <script src="/js/comment/controller.js"></script>
+    <script src="/js/comment/route.js"></script> -->
+    <script src="/js/core/config.js"></script>
+    <script src="/js/core/core.route.js"></script>
+    <script src="/js/core/start.js"></script>
+    <script src="/js/core/wrapper.conrtoller.js"></script>
+    <script src="/js/data/checkout.js"></script>
+    <script src="/js/data/discount.js"></script>
+    <script src="/js/data/pizza.js"></script>
+    <script src="/js/pizza/pizza.controller.js"></script>
+    <script src="/js/pizza/route.js"></script>
+    <!-- <script src="/js/data/comment.js"></script>
+    <script src="/js/data/post.js"></script>
+    <script src="/js/data/user.js"></script> -->
+    <!-- <script src="/js/poc/life.controller.js"></script>
+    <script src="/js/poc/poc.route.js"></script>
+    <script src="/js/post/post.controller.js"></script>
+    <script src="/js/post/route.js"></script>
+    <script src="/js/user/detail.controller.js"></script>
+    <script src="/js/user/route.js"></script>
+    <script src="/js/user/user.controller.js"></script>
+    <script src="/js/user/user.controller.spec.js"></script> -->
+    <script src="/js/blocks/logger/logger.js"></script>
+    <script src="/js/blocks/router/routehelper.js"></script>
+    <!-- endinject -->
+<!-- endbuild -->
+</body>
+</html>

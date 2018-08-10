@@ -1,0 +1,20 @@
+<div class="panel panel-default panel-v-full">
+    <div class="panel-body">
+        <h2>Pizza</h2>
+        <h3>Select ingridiance</h3>
+        <div class="row">
+            <div class="col-md-6" ng-repeat="i in vm.ingridians">
+                <h4>{{i.name}}</h4>
+                <p ng-repeat="toppings in i.data">
+                        <input
+                          type="checkbox"
+                          name="selectedToppings[]"
+                          value="{{toppings.type}}"
+                          
+                        > {{toppings.type}} - {{toppings.price}}
+                       
+                </p> 
+            </div>
+        </div>
+    </div>
+</div>

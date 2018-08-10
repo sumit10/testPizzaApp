@@ -1,0 +1,21 @@
+body{
+  margin: 0px;
+}
+
+.panel-v-full{
+  min-height: 100vh;
+}
+
+.comment-label{
+ padding: 6px;
+ cursor: pointer;
+}
+
+ul.sidebar .sidebar-list a.active{
+  color: #fff;
+  border-right: 3px solid #e99d1a;
+}
+
+.mt10{
+  margin-top: -10px !important;
+}
