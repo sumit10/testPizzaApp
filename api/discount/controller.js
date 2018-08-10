@@ -25,7 +25,7 @@ exports.validate = async (userCode,grossAmount,netAmount) =>{
     if(!cuponCode){
         return false;
     }
-    let calculatedAmount = grossAmount/100 * cuponCode.discountPercentage;
+    let calculatedAmount = grossAmount - ((grossAmount/100) * cuponCode.discountPercentage);
     if(calculatedAmount === netAmount){
         return true;
     }else{

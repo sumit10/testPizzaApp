@@ -10,7 +10,7 @@
 	function checkOutData($http, $q){
 
 		this.order = function(order){
-			return $http.post('/api/checkout/order',order);
+			return $http.post('/api/checkout/order',{order:order});
 		};
 
 	}

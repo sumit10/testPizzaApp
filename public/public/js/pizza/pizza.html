@@ -1,18 +1,32 @@
 <div class="panel panel-default panel-v-full">
     <div class="panel-body">
-        <h2>Pizza</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Pizza</h2>
+            </div>
+            <div class="col-md-6">
+                <h2>Total : {{vm.total}}</h2>
+                <button type="button" class="btn btn-primary" ng-click="vm.gotoCheckOut()">CheckOut</button>
+            </div>
+        </div>
         <h3>Select ingridiance</h3>
         <div class="row">
-            <div class="col-md-6" ng-repeat="i in vm.ingridians">
+            <div class="col-md-6 bs-example" ng-repeat="i in vm.ingridians" ng-class="{'bg-danger' : !i.isValid}">
                 <h4>{{i.name}}</h4>
+                <p ng-if="i.required" >Required (*)</p>
+                <p ng-if="!i.required" >Optional</p>
+                <p ng-if="i.max">Max to select : {{i.max}} </p>
+                <p ng-if="i.min">Min to select : {{i.min}} </p>
                 <p ng-repeat="toppings in i.data">
-                        <input
-                          type="checkbox"
-                          name="selectedToppings[]"
-                          value="{{toppings.type}}"
-                          
-                        > {{toppings.type}} - {{toppings.price}}
-                       
+                    <label >
+                            <input
+                            type="checkbox"
+                            name="selectedToppings[]"
+                            value="{{toppings.type}}"
+                            ng-model="toppings.selected"
+                            ng-click="vm.selectionChange($parent.$index)"
+                          > {{toppings.type}} - {{toppings.price}}
+                    </label>
                 </p> 
             </div>
         </div>

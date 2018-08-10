@@ -5,10 +5,11 @@ const Pizza = require('../pizza/controller')
 
 exports.checkOut  = async (req, res) =>{
     try { 
-        let userIngredients = req.order.ingredients
+        let order = req.body.order;
+        let userIngredients = order.ingredients
         let errors = await Pizza.validate(userIngredients); 
-        if(req.order.cuponCode){
-            let isVaidCode = await Discount.validate(req.order.cuponCode,req.order.grossAmount,req.order.netAmount);
+        if(order.cuponCode){
+            let isVaidCode = await Discount.validate(order.cuponCode,order.grossAmount,order.netAmount);
             if(!isVaidCode){
                 errors.push("Not valid discount code");
             }
@@ -19,16 +20,16 @@ exports.checkOut  = async (req, res) =>{
             calculatedAmount += d.price;
            }) 
         });
-        if(calculatedAmount !== grossAmount){
+        if(calculatedAmount !== order.grossAmount){
             errors.push("Error in calculation");
         }
         if(errors.length){
             apiError(res,err);
             return;
         }
-        let order = await Orders.create(req.order);
+        let orderData = await Orders.create(order);
         res.send({
-            data : order,
+            data : orderData,
             message : "Sucess"
         });
     } catch (err) {

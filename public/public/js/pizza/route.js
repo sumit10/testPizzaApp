@@ -22,7 +22,7 @@
         {
         state: 'pizza',
         config: {
-          url: '/pizza',
+          url: '/',
           templateUrl:'/js/pizza/pizza.html',
           controller: 'PizzaCtrl',
           controllerAs: 'vm',

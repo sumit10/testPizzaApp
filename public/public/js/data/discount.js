@@ -9,7 +9,7 @@
 
 	function dicountData($http, $q){
 
-		this.get = function(code){
+		this.check = function(code){
 			return $http.post('/api/discount/check',{
                 code:code
             });

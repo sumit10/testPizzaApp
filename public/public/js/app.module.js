@@ -18,6 +18,7 @@
         // 'voxweb.poc',
         'test.data',
         'test.pizza',
+        'test.checkout',
         //Feature Modules
 
 

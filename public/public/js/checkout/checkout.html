@@ -1,0 +1,11 @@
+<div class="panel panel-default panel-v-full">
+    <div class="panel-body">
+        <button type="button" class="btn btn-primary" ng-click="vm.back()">Back</button>
+        <h3> Gross amount : {{vm.total}}</h3>
+        <h3> Net amount : {{vm.nettotal}}</h3>
+        <p> Discount Coupan : <input type="text" ng-model="vm.code"> 
+            <a class="btn btn-primary" ng-click="vm.applyCode()">Apply Code</a>
+        </p>
+        <button type="button" class="btn btn-primary" ng-click="vm.checkOut()">CheckOut</button>
+    </div>
+</div>    

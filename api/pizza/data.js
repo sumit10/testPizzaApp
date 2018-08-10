@@ -7,11 +7,11 @@ module.exports = {
             data:[
                 {
                     type:"Normal",
-                    price:"300"
+                    price:300
                 },
                 {
                     type:"Thin crust",
-                    price:"350"
+                    price:350
                 }
             ]
         },{
@@ -21,31 +21,31 @@ module.exports = {
             data:[
                 {
                     type:"Anchovies",
-                    price:"50"
+                    price:50
                 },
                 {
                     type:"Bacon",
-                    price:"100"
+                    price:100
                 },
                 {
                     type:"Canadian Bacon",
-                    price:"150"
+                    price:150
                 },
                 {
                     type:"Chicken",
-                    price:"100"
+                    price:100
                 },
                 {
                     type:"Italian Sausage",
-                    price:"175"
+                    price:175
                 },
                 {
                     type:"Sausage",
-                    price:"125"
+                    price:125
                 },
                 {
                     type:"Pepperoni",
-                    price:"90"
+                    price:90
                 }
             ]
         },{
@@ -55,39 +55,39 @@ module.exports = {
             data:[
                 {
                     type:"Green Peppers",
-                    price:"50"
+                    price:50
                 },
                 {
                     type:"Mushrooms",
-                    price:"25"
+                    price:25
                 },
                 {
                     type:"Onions",
-                    price:"30"
+                    price:30
                 },
                 {
                     type:"Tomatoes",
-                    price:"30"
+                    price:30
                 },
                 {
                     type:"Banana Peppers",
-                    price:"70"
+                    price:70
                 },
                 {
                     type:"Pineapple Tidbits",
-                    price:"65"
+                    price:65
                 },
                 {
                     type:"Ripe Olives",
-                    price:"95"
+                    price:95
                 },
                 {
                     type:"Green Olives",
-                    price:"90"
+                    price:90
                 },
                 {
                     type:"Jalapeno Peppers",
-                    price:"75"
+                    price:75
                 }
             ]
         },{
@@ -97,29 +97,29 @@ module.exports = {
             data:[
                 {
                     type:"Parmesan/Romano",
-                    price:"100"
+                    price:100
                 },
                 {
                     type:"Three Cheese Blend",
-                    price:"150"
+                    price:150
                 }
             ]
         },{
             name:"Sauces",
             required:true,
-            max:1,
+            min:1,
             data:[
                 {
                     type:"Chicken BBQ Pizza Sauce",
-                    price:"80"
+                    price:80
                 },
                 {
                     type:"Ranch Sauce",
-                    price:"70"
+                    price:70
                 },
                 {
                     type:"Spinach Alfredo Sauce",
-                    price:"75"
+                    price:75
                 }
             ]
         },{
@@ -129,19 +129,19 @@ module.exports = {
             data:[
                 {
                     type:"Chicken Poppers",
-                    price:"200"
+                    price:200
                 },
                 {
                     type:"Chicken Wings (Roasted) ",
-                    price:"250"
+                    price:250
                 },
                 {
                     type:"Chocolate Chip Cookie",
-                    price:"150"
+                    price:150
                 },
                 {
                     type:"Double Chocolate Chip Brownie",
-                    price:"200"
+                    price:200
                 }
             ]
         },{
@@ -151,35 +151,35 @@ module.exports = {
             data:[
                 {
                     type:"Pepperoncini",
-                    price:"25"
+                    price:25
                 },
                 {
                     type:"BBQ Dipping Sauce",
-                    price:"25"
+                    price:25
                 },
                 {
                     type:"Blue Cheese Dipping Sauce",
-                    price:"25"
+                    price:25
                 },
                 {
                     type:"Buffalo Dipping Sauce",
-                    price:"25"
+                    price:25
                 },
                 {
                     type:"Cheese Dipping Sauce",
-                    price:"25"
+                    price:25
                 },
                 {
                     type:"Garlic Sauce",
-                    price:"25"
+                    price:25
                 },
                 {
                     type:"Garlic Parmesan Sauce",
-                    price:"25"
+                    price:25
                 },
                 {
                     type:"Honey Chipotle Sauce",
-                    price:"25"
+                    price:25
                 }
             ]
         }
